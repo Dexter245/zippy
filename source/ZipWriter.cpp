@@ -1,6 +1,6 @@
 #include "ZipWriter.h"
 #include <iostream>
-#include "ZipConst.h"
+#include "CDREnd.h"
 
 ZipWriter::ZipWriter(std::string filepath) :
         filepath(filepath) {
@@ -35,8 +35,6 @@ void ZipWriter::writeCentralDirectory() {
     for (auto fileWriter : fileWriters) {
         //todo: write file headers
     }
-
-    //todo: DO THIS BELOW WITH A STRUCT!?
 
     CDREnd cdrEnd;
     cdrEnd.diskNumber = 0;

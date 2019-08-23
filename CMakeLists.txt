@@ -7,4 +7,4 @@ set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 include_directories(include)
 
 add_executable(zippy
-        source/main.cpp include/ZipWriter.h include/ZipFileWriter.h source/ZipWriter.cpp source/ZipFileWriter.cpp include/ZipConst.h)
+        source/main.cpp include/ZipWriter.h include/ZipFileWriter.h source/ZipWriter.cpp source/ZipFileWriter.cpp include/CDREnd.h source/CDREnd.cpp)
