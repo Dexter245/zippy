@@ -29,6 +29,8 @@ void ZipWriter::writeZipFile() {
 
     writeCentralDirectory();
 
+    ofs.close();
+
 }
 
 void ZipWriter::writeCentralDirectory() {
@@ -43,7 +45,7 @@ void ZipWriter::writeCentralDirectory() {
     cdrEnd.totalEntries = cdrEnd.diskEntries;
     cdrEnd.CDSize = 0;
     cdrEnd.CDOffset = 0;
-    cdrEnd.comment = "bla";
-    cdrEnd.writeToOFS(ofs);
+    cdrEnd.setComment("bla");
+    cdrEnd.writeToFS(ofs);
     ofs.flush();
 }

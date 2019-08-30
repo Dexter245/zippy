@@ -6,7 +6,7 @@
 #include <fstream>
 #include "ZipFileWriter.h"
 
-class ZipWriter{
+class ZipWriter {
 private:
     std::vector<ZipFileWriter> fileWriters = std::vector<ZipFileWriter>();
     std::string filepath;
@@ -16,6 +16,7 @@ private:
 
 public:
     explicit ZipWriter(std::string filepath);
+
     ~ZipWriter();
 
     void addFile(std::string filepath);
